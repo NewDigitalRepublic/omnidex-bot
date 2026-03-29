@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: omnidex-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: SCHWAB_API_KEY
+        sync: false
+      - key: SCHWAB_SECRET
+        sync: false
+      - key: SCHWAB_CALLBACK_URL
+        sync: false
+      - key: ACCOUNT_HASH
+        sync: false
+      - key: TQQQ_SHARES
+        value: "100"
+      - key: SQQQ_SHARES
+        value: "100"
