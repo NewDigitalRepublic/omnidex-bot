@@ -3,3 +3,4 @@ uvicorn
 schwab-py
 pandas
 numpy
+httpx
